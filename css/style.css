@@ -589,3 +589,15 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .nc-marq { overflow-x: auto; }
   .float-call .dot { animation: none; }
 }
+
+
+/* ---- Branded no-photo panels (truthful placeholders until real photos exist) ---- */
+.nc-photo-brand { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; gap: 14px; }
+.nc-photo-brand img.logo-silver { height: 60px; width: auto; object-fit: contain; }
+.nc-photo-brand .pb-name { font-family: 'Fraunces', serif; font-weight: 500; font-size: 21px; color: var(--paper-hi); margin: 0; }
+.nc-photo-brand ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; text-align: left; max-width: 240px; }
+.nc-photo-brand li { color: var(--paper-soft); font-size: 14px; padding-left: 22px; position: relative; }
+.nc-photo-brand li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent-lt); font-weight: 700; }
+.nc-promo { display: flex; flex-direction: column; justify-content: flex-end; aspect-ratio: 1; border: 1px solid var(--bd-dark); padding: 18px; background: var(--charcoal-card); }
+.nc-promo h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; color: var(--paper-hi); margin: 0 0 6px; }
+.nc-promo p { color: var(--paper-soft); font-size: 13px; line-height: 1.5; margin: 0; }
