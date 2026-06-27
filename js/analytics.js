@@ -3,7 +3,7 @@
 // ID (looks like "G-AB12CD34EF"), found in GA Admin > Data Streams. Until then this
 // file does nothing and makes no network requests.
 (function () {
-  var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+  var GA_MEASUREMENT_ID = 'G-WEJV0T4X21';
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXXX') !== -1) return;
 
   var s = document.createElement('script');
