@@ -27,8 +27,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Heritage Roofing & Restoration","url":"https://www.heritagerrtn.com","logo":"https://www.heritagerrtn.com/heritage-logo.jpg","image":"https://www.heritagerrtn.com/heritage-logo.jpg","priceRange":"$$","telephone":"(615) 670-3132","email":"jacob@heritagerrtn.com","areaServed":{"@type":"City","name":"Glasgow, Kentucky"},"address":{"@type":"PostalAddress","addressRegion":"TN/KY","addressCountry":"US"},"openingHours":"Mo-Su 00:00-23:59"}</script>
+  <script src="/js/analytics.js" defer></script>
 </head>
 <body class=" text-navy font-sans antialiased">
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="bg-navy text-white text-sm">
@@ -37,26 +40,37 @@
         <a href="tel:+16156703132" class="font-semibold hover:text-rust transition">(615) 670-3132</a>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-2">
-        <div class="w-11 h-11 rounded bg-navy text-cream flex items-center justify-center font-bold text-lg">H</div>
-        <div class="leading-tight">
-          <div class="font-bold text-navy text-lg tracking-tight">HERITAGE</div>
-          <div class="text-[10px] uppercase tracking-widest text-rust font-semibold">Roofing &amp; Restoration</div>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center" aria-label="Heritage Roofing &amp; Restoration — home">
+        <img src="/heritage-logo.jpg" alt="Heritage Roofing &amp; Restoration" class="logo-img" width="56" height="56" />
       </a>
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-navy">
-        <a href="../services/index.html" class="hover:text-rust transition">Services</a>
-        <a href="../service-areas/index.html" class="hover:text-rust transition">Service Areas</a>
-        <a href="../about.html" class="hover:text-rust transition">About</a>
-        <a href="../reviews.html" class="hover:text-rust transition">Reviews</a>
-        <a href="../gallery.html" class="hover:text-rust transition">Gallery</a>
-        <a href="../financing.html" class="hover:text-rust transition">Financing</a>
-        <a href="../contact.html" class="hover:text-rust transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-navy" aria-label="Primary">
+        <a href="/services/index.html" class="hover:text-rust transition">Services</a>
+        <a href="/service-areas/index.html" class="hover:text-rust transition">Service Areas</a>
+        <a href="/about.html" class="hover:text-rust transition">About</a>
+        <a href="/reviews.html" class="hover:text-rust transition">Reviews</a>
+        <a href="/gallery.html" class="hover:text-rust transition">Gallery</a>
+        <a href="/financing.html" class="hover:text-rust transition">Financing</a>
+        <a href="/contact.html" class="hover:text-rust transition">Contact</a>
       </nav>
-      <a href="../quote.html" class="bg-rust hover:bg-rust-700 text-white font-semibold px-5 py-2.5 rounded-md text-sm transition">Get a Free Quote</a>
+      <div class="flex items-center gap-2">
+        <a href="/quote.html" class="sm:inline-block bg-rust hover:bg-rust-700 text-white font-semibold px-5 py-2.5 rounded-md text-sm transition">Get a Free Quote</a>
+        <button id="nav-toggle" class="nav-toggle md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+      </div>
     </div>
+    <nav id="mobile-nav" class="mobile-nav md:hidden" aria-label="Mobile">
+      <a href="/services/index.html">Services</a>
+      <a href="/service-areas/index.html">Service Areas</a>
+      <a href="/about.html">About</a>
+      <a href="/reviews.html">Reviews</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/financing.html">Financing</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/quote.html" class="mobile-cta">Get a Free Quote</a>
+    </nav>
   </header>
+
+  <main id="main" tabindex="-1">
 
   <section class="bg-navy text-white py-14">
     <div class="max-w-7xl mx-auto px-4">
@@ -106,6 +120,8 @@
   </section>
   
 
+  </main>
+
   <footer class="bg-navy text-white mt-0">
     <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
       <div>
@@ -117,39 +133,46 @@
       <div>
         <div class="font-semibold mb-2 text-rust">Services</div>
         <ul class="space-y-1 text-white/80">
-          <li><a class="hover:text-white transition" href="../services/roof-repair-replacement.html">Roof Repair & Replacement</a></li>
-<li><a class="hover:text-white transition" href="../services/storm-restoration.html">Storm & Disaster Restoration</a></li>
-<li><a class="hover:text-white transition" href="../services/gutters-siding.html">Gutters & Siding</a></li>
-<li><a class="hover:text-white transition" href="../services/insurance-claims.html">Insurance Claim Assistance</a></li>
-<li><a class="hover:text-white transition" href="../services/more-services.html">More Services</a></li>
+          <li><a class="hover:text-white transition" href="/services/roof-repair-replacement.html">Roof Repair &amp; Replacement</a></li>
+          <li><a class="hover:text-white transition" href="/services/storm-restoration.html">Storm &amp; Disaster Restoration</a></li>
+          <li><a class="hover:text-white transition" href="/services/gutters-siding.html">Gutters &amp; Siding</a></li>
+          <li><a class="hover:text-white transition" href="/services/insurance-claims.html">Insurance Claim Assistance</a></li>
+          <li><a class="hover:text-white transition" href="/services/more-services.html">More Services</a></li>
         </ul>
       </div>
       <div>
         <div class="font-semibold mb-2 text-rust">Company</div>
         <ul class="space-y-1 text-white/80">
-          <li><a class="hover:text-white transition" href="../about.html">About Us</a></li>
-          <li><a class="hover:text-white transition" href="../reviews.html">Reviews</a></li>
-          <li><a class="hover:text-white transition" href="../gallery.html">Gallery</a></li>
-          <li><a class="hover:text-white transition" href="../financing.html">Financing</a></li>
-          <li><a class="hover:text-white transition" href="../quote.html">Get a Free Quote</a></li>
-          <li><a class="hover:text-white transition" href="../contact.html">Contact</a></li>
+          <li><a class="hover:text-white transition" href="/about.html">About Us</a></li>
+          <li><a class="hover:text-white transition" href="/reviews.html">Reviews</a></li>
+          <li><a class="hover:text-white transition" href="/gallery.html">Gallery</a></li>
+          <li><a class="hover:text-white transition" href="/financing.html">Financing</a></li>
+          <li><a class="hover:text-white transition" href="/quote.html">Get a Free Quote</a></li>
+          <li><a class="hover:text-white transition" href="/contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <div class="font-semibold mb-2 text-rust">Service Areas</div>
         <ul class="space-y-1 text-white/80 max-h-40 overflow-hidden">
-          <li>Greater Nashville Area</li>
-<li>Northern Middle Tennessee</li>
-<li>South Central Tennessee</li>
-<li>Upper Cumberland Region</li>
-<li>West Tennessee</li>
+          <li><a class="hover:text-white transition" href="/service-areas/nashville-tn.html">Nashville, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/murfreesboro-tn.html">Murfreesboro, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/franklin-tn.html">Franklin, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/clarksville-tn.html">Clarksville, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/bowling-green-ky.html">Bowling Green, KY</a></li>
         </ul>
-        <a href="../service-areas/index.html" class="inline-block mt-2 text-rust hover:text-white transition font-medium">View full service area &rarr;</a>
+        <a href="/service-areas/index.html" class="inline-block mt-2 text-rust hover:text-white transition font-medium">View full service area &rarr;</a>
       </div>
     </div>
-    <div class="border-t border-white/10 py-4 text-center text-white/50 text-xs">
-      &copy; 2026 Heritage Roofing & Restoration. All rights reserved.
+    <div class="border-t border-white/10 py-4">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-2 justify-between items-center text-white/50 text-xs">
+        <span>&copy; 2026 Heritage Roofing &amp; Restoration. All rights reserved.</span>
+        <span class="flex gap-4">
+          <a class="hover:text-white transition" href="/privacy.html">Privacy Policy</a>
+          <a class="hover:text-white transition" href="/terms.html">Terms of Service</a>
+        </span>
+      </div>
     </div>
   </footer>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
