@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Heritage Roofing & Restoration">
-  <rect width="64" height="64" rx="12" fill="#1B2A4A"/>
-  <path d="M20 16h6v13h12V16h6v32h-6V35H26v13h-6z" fill="#C9962E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Heritage Roofing &amp; Restoration">
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="#ffffff" stroke="#C9962E" stroke-width="3"/>
+  <path d="M20 15h6.5v13.5h11V15H44v34h-6.5V35h-11v14H20z" fill="#C9962E"/>
 </svg>

@@ -27,8 +27,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Heritage Roofing & Restoration","url":"https://www.heritagerrtn.com","logo":"https://www.heritagerrtn.com/heritage-logo.jpg","image":"https://www.heritagerrtn.com/heritage-logo.jpg","priceRange":"$$","telephone":"(615) 670-3132","email":"jacob@heritagerrtn.com","areaServed":[{"@type":"City","name":"Nashville, Tennessee"},{"@type":"City","name":"Clarksville, Tennessee"},{"@type":"City","name":"Murfreesboro, Tennessee"},{"@type":"City","name":"Franklin, Tennessee"},{"@type":"City","name":"Hendersonville, Tennessee"},{"@type":"City","name":"Gallatin, Tennessee"},{"@type":"City","name":"Mt. Juliet, Tennessee"},{"@type":"City","name":"Spring Hill, Tennessee"},{"@type":"City","name":"Lebanon, Tennessee"},{"@type":"City","name":"Columbia, Tennessee"},{"@type":"City","name":"Cookeville, Tennessee"},{"@type":"City","name":"Dickson, Tennessee"},{"@type":"City","name":"Tullahoma, Tennessee"},{"@type":"City","name":"Manchester, Tennessee"},{"@type":"City","name":"Shelbyville, Tennessee"},{"@type":"City","name":"McMinnville, Tennessee"},{"@type":"City","name":"Lawrenceburg, Tennessee"},{"@type":"City","name":"Lewisburg, Tennessee"},{"@type":"City","name":"Pulaski, Tennessee"},{"@type":"City","name":"Portland, Tennessee"},{"@type":"City","name":"Springfield, Tennessee"},{"@type":"City","name":"White House, Tennessee"},{"@type":"City","name":"Goodlettsville, Tennessee"},{"@type":"City","name":"Smyrna, Tennessee"},{"@type":"City","name":"La Vergne, Tennessee"},{"@type":"City","name":"Brentwood, Tennessee"},{"@type":"City","name":"Fairview, Tennessee"},{"@type":"City","name":"Milan, Tennessee"},{"@type":"City","name":"Crossville, Tennessee"},{"@type":"City","name":"Sparta, Tennessee"},{"@type":"City","name":"Winchester, Tennessee"},{"@type":"City","name":"Fayetteville, Tennessee"},{"@type":"City","name":"Ashland City, Tennessee"},{"@type":"City","name":"Waverly, Tennessee"},{"@type":"City","name":"Lynchburg, Tennessee"},{"@type":"City","name":"Jamestown, Tennessee"},{"@type":"City","name":"Smithville, Tennessee"},{"@type":"City","name":"Carthage, Tennessee"},{"@type":"City","name":"Celina, Tennessee"},{"@type":"City","name":"Bowling Green, Kentucky"},{"@type":"City","name":"Hopkinsville, Kentucky"},{"@type":"City","name":"Glasgow, Kentucky"},{"@type":"City","name":"Franklin, Kentucky"},{"@type":"City","name":"Scottsville, Kentucky"},{"@type":"City","name":"Russellville, Kentucky"},{"@type":"City","name":"Murray, Kentucky"},{"@type":"City","name":"Somerset, Kentucky"},{"@type":"City","name":"Columbia, Kentucky"},{"@type":"City","name":"Monticello, Kentucky"}],"address":{"@type":"PostalAddress","addressRegion":"TN/KY","addressCountry":"US"},"openingHours":"Mo-Su 00:00-23:59"}</script>
+  <script src="/js/analytics.js" defer></script>
 </head>
 <body class=" text-navy font-sans antialiased">
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="bg-navy text-white text-sm">
@@ -37,26 +40,37 @@
         <a href="tel:+16156703132" class="font-semibold hover:text-rust transition">(615) 670-3132</a>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="w-11 h-11 rounded bg-navy text-cream flex items-center justify-center font-bold text-lg">H</div>
-        <div class="leading-tight">
-          <div class="font-bold text-navy text-lg tracking-tight">HERITAGE</div>
-          <div class="text-[10px] uppercase tracking-widest text-rust font-semibold">Roofing &amp; Restoration</div>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center" aria-label="Heritage Roofing &amp; Restoration — home">
+        <img src="/heritage-logo.jpg" alt="Heritage Roofing &amp; Restoration" class="logo-img" width="56" height="56" />
       </a>
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-navy">
-        <a href="services/index.html" class="hover:text-rust transition">Services</a>
-        <a href="service-areas/index.html" class="hover:text-rust transition">Service Areas</a>
-        <a href="about.html" class="hover:text-rust transition">About</a>
-        <a href="reviews.html" class="hover:text-rust transition">Reviews</a>
-        <a href="gallery.html" class="hover:text-rust transition">Gallery</a>
-        <a href="financing.html" class="hover:text-rust transition">Financing</a>
-        <a href="contact.html" class="hover:text-rust transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-navy" aria-label="Primary">
+        <a href="/services/index.html" class="hover:text-rust transition">Services</a>
+        <a href="/service-areas/index.html" class="hover:text-rust transition">Service Areas</a>
+        <a href="/about.html" class="hover:text-rust transition">About</a>
+        <a href="/reviews.html" class="hover:text-rust transition">Reviews</a>
+        <a href="/gallery.html" class="hover:text-rust transition">Gallery</a>
+        <a href="/financing.html" class="hover:text-rust transition">Financing</a>
+        <a href="/contact.html" class="hover:text-rust transition">Contact</a>
       </nav>
-      <a href="quote.html" class="bg-rust hover:bg-rust-700 text-white font-semibold px-5 py-2.5 rounded-md text-sm transition">Get a Free Quote</a>
+      <div class="flex items-center gap-2">
+        <a href="/quote.html" class="sm:inline-block bg-rust hover:bg-rust-700 text-white font-semibold px-5 py-2.5 rounded-md text-sm transition">Get a Free Quote</a>
+        <button id="nav-toggle" class="nav-toggle md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+      </div>
     </div>
+    <nav id="mobile-nav" class="mobile-nav md:hidden" aria-label="Mobile">
+      <a href="/services/index.html">Services</a>
+      <a href="/service-areas/index.html">Service Areas</a>
+      <a href="/about.html">About</a>
+      <a href="/reviews.html">Reviews</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/financing.html">Financing</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/quote.html" class="mobile-cta">Get a Free Quote</a>
+    </nav>
   </header>
+
+  <main id="main" tabindex="-1">
 
 <section class="relative bg-navy text-white overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
@@ -76,8 +90,29 @@
         <li class="flex gap-3"><span class="text-rust font-bold">&#10003;</span> Free inspections &amp; honest quotes</li>
         <li class="flex gap-3"><span class="text-rust font-bold">&#10003;</span> Storm damage &amp; insurance claim support</li>
         <li class="flex gap-3"><span class="text-rust font-bold">&#10003;</span> Licensed, local, and responsive</li>
-        <li class="flex gap-3"><span class="text-rust font-bold">&#10003;</span> Serving 48+ communities across two states</li>
+        <li class="flex gap-3"><span class="text-rust font-bold">&#10003;</span> Serving 49+ communities across two states</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream border-y">
+  <div class="max-w-7xl mx-auto px-4 py-6 trust-grid gap-x-4 gap-y-5 text-center">
+    <div>
+      <div class="font-extrabold text-navy">Licensed &amp; Insured</div>
+      <div class="text-navy/60 text-xs mt-0.5">Local, vetted crews</div>
+    </div>
+    <div>
+      <div class="font-extrabold text-navy">24/7 Response</div>
+      <div class="text-navy/60 text-xs mt-0.5">Storm damage anytime</div>
+    </div>
+    <div>
+      <div class="font-extrabold text-navy">Free Inspections</div>
+      <div class="text-navy/60 text-xs mt-0.5">Honest, no-pressure quotes</div>
+    </div>
+    <div>
+      <div class="font-extrabold text-navy">49+ Cities Served</div>
+      <div class="text-navy/60 text-xs mt-0.5">Across TN &amp; KY</div>
     </div>
   </div>
 </section>
@@ -91,7 +126,7 @@
     
     <a href="services/roof-repair-replacement.html" class="block border border-navy/10 rounded-xl p-6 hover:shadow-lg hover:border-rust/40 transition group">
       <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4 group-hover:bg-rust/10">
-        <span class="text-rust font-bold text-xl">R</span>
+        <svg class="text-rust w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
       </div>
       <h3 class="font-bold text-lg mb-2 text-navy">Roof Repair & Replacement</h3>
       <p class="text-navy/70 text-sm mb-3">Leak repairs, full replacements, and new installs built to last.</p>
@@ -100,7 +135,7 @@
 
     <a href="services/storm-restoration.html" class="block border border-navy/10 rounded-xl p-6 hover:shadow-lg hover:border-rust/40 transition group">
       <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4 group-hover:bg-rust/10">
-        <span class="text-rust font-bold text-xl">S</span>
+        <svg class="text-rust w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
       </div>
       <h3 class="font-bold text-lg mb-2 text-navy">Storm & Disaster Restoration</h3>
       <p class="text-navy/70 text-sm mb-3">Wind, hail, fire, and water damage — handled start to finish.</p>
@@ -109,7 +144,7 @@
 
     <a href="services/gutters-siding.html" class="block border border-navy/10 rounded-xl p-6 hover:shadow-lg hover:border-rust/40 transition group">
       <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4 group-hover:bg-rust/10">
-        <span class="text-rust font-bold text-xl">G</span>
+        <svg class="text-rust w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>
       </div>
       <h3 class="font-bold text-lg mb-2 text-navy">Gutters & Siding</h3>
       <p class="text-navy/70 text-sm mb-3">Protect your home's exterior with gutters and siding done right.</p>
@@ -118,7 +153,7 @@
 
     <a href="services/insurance-claims.html" class="block border border-navy/10 rounded-xl p-6 hover:shadow-lg hover:border-rust/40 transition group">
       <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4 group-hover:bg-rust/10">
-        <span class="text-rust font-bold text-xl">I</span>
+        <svg class="text-rust w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
       </div>
       <h3 class="font-bold text-lg mb-2 text-navy">Insurance Claim Assistance</h3>
       <p class="text-navy/70 text-sm mb-3">We help you navigate the claims process from inspection to payout.</p>
@@ -127,7 +162,7 @@
 
     <a href="services/more-services.html" class="block border border-navy/10 rounded-xl p-6 hover:shadow-lg hover:border-rust/40 transition group">
       <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4 group-hover:bg-rust/10">
-        <span class="text-rust font-bold text-xl">M</span>
+        <svg class="text-rust w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/></svg>
       </div>
       <h3 class="font-bold text-lg mb-2 text-navy">More Services</h3>
       <p class="text-navy/70 text-sm mb-3">Patios, crawlspaces, tree removal — and more on the way.</p>
@@ -153,30 +188,36 @@
 
 <section class="max-w-7xl mx-auto px-4 py-16">
   <div class="text-center max-w-2xl mx-auto mb-10">
-    <h2 class="text-3xl font-extrabold text-navy mb-3">What Our Customers Say</h2>
+    <h2 class="text-3xl font-extrabold text-navy mb-3">Built on Trust, Not Hype</h2>
+    <p class="text-navy/70">We're a growing local company, and we'd rather earn real reviews than post fake ones. Here's what we promise every homeowner we work with.</p>
   </div>
   <div class="grid md:grid-cols-3 gap-6">
-    
+
     <div class="border border-navy/10 rounded-xl p-6 bg-white">
-      <div class="text-rust mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="text-navy/80 text-sm mb-3">Reviews from real customers are on the way — check back soon, or read the latest on our Reviews page.</p>
+      <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4"><span class="text-rust font-bold text-xl">&#10003;</span></div>
+      <h3 class="font-bold text-navy mb-2">Honest Inspections</h3>
+      <p class="text-navy/70 text-sm">We tell you what your roof actually needs — repair or replace — not what pads the invoice.</p>
     </div>
 
     <div class="border border-navy/10 rounded-xl p-6 bg-white">
-      <div class="text-rust mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="text-navy/80 text-sm mb-3">Reviews from real customers are on the way — check back soon, or read the latest on our Reviews page.</p>
+      <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4"><span class="text-rust font-bold text-xl">&#9742;</span></div>
+      <h3 class="font-bold text-navy mb-2">We Answer the Phone</h3>
+      <p class="text-navy/70 text-sm">Storm damage doesn't keep business hours, and neither do we. Call any time, day or night.</p>
     </div>
 
     <div class="border border-navy/10 rounded-xl p-6 bg-white">
-      <div class="text-rust mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="text-navy/80 text-sm mb-3">Reviews from real customers are on the way — check back soon, or read the latest on our Reviews page.</p>
+      <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center mb-4"><span class="text-rust font-bold text-xl">&#9733;</span></div>
+      <h3 class="font-bold text-navy mb-2">Reviews Coming Soon</h3>
+      <p class="text-navy/70 text-sm">As our customers share their experiences on Google, you'll find their verified reviews here.</p>
     </div>
   </div>
   <div class="text-center mt-8">
-    <a href="reviews.html" class="text-rust font-bold">Read all reviews &rarr;</a>
+    <a href="reviews.html" class="text-rust font-bold">More about our promise &rarr;</a>
   </div>
 </section>
 
+
+  </main>
 
   <footer class="bg-navy text-white mt-0">
     <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
@@ -189,39 +230,46 @@
       <div>
         <div class="font-semibold mb-2 text-rust">Services</div>
         <ul class="space-y-1 text-white/80">
-          <li><a class="hover:text-white transition" href="services/roof-repair-replacement.html">Roof Repair & Replacement</a></li>
-<li><a class="hover:text-white transition" href="services/storm-restoration.html">Storm & Disaster Restoration</a></li>
-<li><a class="hover:text-white transition" href="services/gutters-siding.html">Gutters & Siding</a></li>
-<li><a class="hover:text-white transition" href="services/insurance-claims.html">Insurance Claim Assistance</a></li>
-<li><a class="hover:text-white transition" href="services/more-services.html">More Services</a></li>
+          <li><a class="hover:text-white transition" href="/services/roof-repair-replacement.html">Roof Repair &amp; Replacement</a></li>
+          <li><a class="hover:text-white transition" href="/services/storm-restoration.html">Storm &amp; Disaster Restoration</a></li>
+          <li><a class="hover:text-white transition" href="/services/gutters-siding.html">Gutters &amp; Siding</a></li>
+          <li><a class="hover:text-white transition" href="/services/insurance-claims.html">Insurance Claim Assistance</a></li>
+          <li><a class="hover:text-white transition" href="/services/more-services.html">More Services</a></li>
         </ul>
       </div>
       <div>
         <div class="font-semibold mb-2 text-rust">Company</div>
         <ul class="space-y-1 text-white/80">
-          <li><a class="hover:text-white transition" href="about.html">About Us</a></li>
-          <li><a class="hover:text-white transition" href="reviews.html">Reviews</a></li>
-          <li><a class="hover:text-white transition" href="gallery.html">Gallery</a></li>
-          <li><a class="hover:text-white transition" href="financing.html">Financing</a></li>
-          <li><a class="hover:text-white transition" href="quote.html">Get a Free Quote</a></li>
-          <li><a class="hover:text-white transition" href="contact.html">Contact</a></li>
+          <li><a class="hover:text-white transition" href="/about.html">About Us</a></li>
+          <li><a class="hover:text-white transition" href="/reviews.html">Reviews</a></li>
+          <li><a class="hover:text-white transition" href="/gallery.html">Gallery</a></li>
+          <li><a class="hover:text-white transition" href="/financing.html">Financing</a></li>
+          <li><a class="hover:text-white transition" href="/quote.html">Get a Free Quote</a></li>
+          <li><a class="hover:text-white transition" href="/contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <div class="font-semibold mb-2 text-rust">Service Areas</div>
         <ul class="space-y-1 text-white/80 max-h-40 overflow-hidden">
-          <li>Greater Nashville Area</li>
-<li>Northern Middle Tennessee</li>
-<li>South Central Tennessee</li>
-<li>Upper Cumberland Region</li>
-<li>West Tennessee</li>
+          <li><a class="hover:text-white transition" href="/service-areas/nashville-tn.html">Nashville, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/murfreesboro-tn.html">Murfreesboro, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/franklin-tn.html">Franklin, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/clarksville-tn.html">Clarksville, TN</a></li>
+          <li><a class="hover:text-white transition" href="/service-areas/bowling-green-ky.html">Bowling Green, KY</a></li>
         </ul>
-        <a href="service-areas/index.html" class="inline-block mt-2 text-rust hover:text-white transition font-medium">View full service area &rarr;</a>
+        <a href="/service-areas/index.html" class="inline-block mt-2 text-rust hover:text-white transition font-medium">View full service area &rarr;</a>
       </div>
     </div>
-    <div class="border-t border-white/10 py-4 text-center text-white/50 text-xs">
-      &copy; 2026 Heritage Roofing & Restoration. All rights reserved.
+    <div class="border-t border-white/10 py-4">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-2 justify-between items-center text-white/50 text-xs">
+        <span>&copy; 2026 Heritage Roofing &amp; Restoration. All rights reserved.</span>
+        <span class="flex gap-4">
+          <a class="hover:text-white transition" href="/privacy.html">Privacy Policy</a>
+          <a class="hover:text-white transition" href="/terms.html">Terms of Service</a>
+        </span>
+      </div>
     </div>
   </footer>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
