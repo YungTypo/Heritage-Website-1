@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Heritage Roofing &amp; Restoration">
-  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="#ffffff" stroke="#C9962E" stroke-width="3"/>
-  <path d="M20 15h6.5v13.5h11V15H44v34h-6.5V35h-11v14H20z" fill="#C9962E"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="#16221A"/>
+  <path d="M32 9 L52 16 V33 C52 45 43 52 32 56 C21 52 12 45 12 33 V16 Z"
+        fill="#1C2A1E" stroke="#C9A063" stroke-width="2.4" stroke-linejoin="round"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="30" font-weight="700" fill="#C9A063">H</text>
 </svg>
