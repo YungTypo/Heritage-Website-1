@@ -41,6 +41,10 @@ img{max-width:100%}
 .hrPhoto>img{width:min(46%,180px);height:auto;opacity:.5;filter:saturate(.9)}
 .hrPhoto.hrPhotoWarm{background:radial-gradient(120% 90% at 30% 15%,#3A2E1E 0%,#171310 70%)}
 
+/* before/after slider — stop native image drag from hijacking the pointer */
+[data-ba]{-webkit-user-select:none;user-select:none}
+[data-ba] img{pointer-events:none;-webkit-user-drag:none;user-select:none}
+
 /* FAQ accordion */
 .faq-a[hidden]{display:none}
 
