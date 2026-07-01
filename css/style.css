@@ -654,3 +654,165 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .nc-promo { display: flex; flex-direction: column; justify-content: flex-end; aspect-ratio: 1; border: 1px solid var(--bd-dark); padding: 18px; background: var(--charcoal-card); }
 .nc-promo h3 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 18px; color: var(--paper-hi); margin: 0 0 6px; }
 .nc-promo p { color: var(--paper-soft); font-size: 13px; line-height: 1.5; margin: 0; }
+
+/* =====================================================================
+   INNER-PAGE DESIGN LAYER — "Heritage Gold" unified site-wide
+   ---------------------------------------------------------------------
+   The homepage (index.html) is a bespoke build on the nc- component
+   system. Every other page historically used a plainer utility-class
+   layout. This layer, scoped to `body.page` (present on every page
+   EXCEPT the homepage), re-skins those pages — hero, prose, cards,
+   asides, city chips, forms, FAQ and CTA — into the same deep-green /
+   cream / gold language, WITHOUT touching any page's content, DOM
+   structure, schema, or SEO markup. Selectors lead with `main#main`
+   and the page-only `.bg-navy / .bg-rust / .max-w-* / .bg-cream`
+   patterns, none of which the homepage uses, so the homepage is
+   never affected.
+   ===================================================================== */
+
+/* ---- page hero: deep-green band with a gold glow (echoes the home hero) ---- */
+body.page main#main > section.bg-navy {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 150% at 88% -30%, rgba(181,135,76,.20), transparent 55%),
+    linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-deep) 100%);
+  border-bottom: 1px solid var(--bd-dark);
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+body.page main#main > section.bg-navy > div { position: relative; z-index: 1; }
+
+/* eyebrow with a gold lead-rule (matches the homepage .nc-eyebrow) */
+body.page section.bg-navy p.text-rust {
+  display: inline-flex; align-items: center; gap: 11px;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--accent-lt); margin-bottom: 16px;
+}
+body.page section.bg-navy p.text-rust::before {
+  content: ""; width: 28px; height: 2px; background: var(--accent);
+  display: inline-block; flex: 0 0 auto;
+}
+body.page section.bg-navy .text-center p.text-rust { justify-content: center; }
+
+/* hero headline + subhead */
+body.page section.bg-navy h1 {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
+  font-size: clamp(34px, 4.6vw, 54px); line-height: 1.06;
+  letter-spacing: -.01em; color: var(--paper-hi); margin: 0;
+}
+body.page section.bg-navy h1 ~ p {
+  color: var(--paper-soft); font-size: 17px; line-height: 1.7;
+  margin-top: 18px; max-width: 62ch;
+}
+body.page section.bg-navy .text-center h1 ~ p { margin-left: auto; margin-right: auto; }
+
+/* ---- breadcrumb spacing ---- */
+body.page main#main > nav[aria-label="Breadcrumb"] { padding-top: 22px; padding-bottom: 0; }
+
+/* ---- content rhythm & prose ---- */
+body.page main#main > section:not(.bg-navy):not(.bg-rust) {
+  padding-top: 72px; padding-bottom: 72px;
+}
+body.page main#main > section:not(.bg-navy):not(.bg-rust) p { line-height: 1.72; }
+/* inline text links inside prose get the readable bronze-gold */
+body.page main#main > section:not(.bg-navy):not(.bg-rust) p a,
+body.page main#main > section:not(.bg-navy):not(.bg-rust) li a:not(.block) {
+  color: var(--gold-ink); font-weight: 600;
+}
+body.page main#main > section:not(.bg-navy):not(.bg-rust) p a:hover,
+body.page main#main > section:not(.bg-navy):not(.bg-rust) li a:not(.block):hover {
+  text-decoration: underline;
+}
+/* region separators on the service-areas hub */
+body.page main#main > section:not(.bg-navy):not(.bg-rust) h2.border-b {
+  border-bottom: 1px solid var(--bd-light);
+}
+
+/* ---- cream cards / asides get depth + stickiness ---- */
+body.page .bg-cream {
+  background: var(--cream);
+  border: 1px solid var(--bd-light);
+  border-radius: 6px;
+  box-shadow: 0 20px 46px -32px rgba(0,0,0,.4);
+}
+body.page aside.bg-cream { position: sticky; top: 96px; }
+@media (max-width: 767px) { body.page aside.bg-cream { position: static; } }
+
+/* static bordered panels (e.g. the reviews "why choose" box) read as surfaces */
+body.page div.border.rounded-xl {
+  background: #fff; border: 1px solid var(--bd-light); border-radius: 6px;
+}
+
+/* ---- feature tiles (service cards, 404 popular pages) ---- */
+body.page a.block.border.rounded-xl {
+  background: #fff; border: 1px solid var(--bd-light); border-radius: 6px;
+  transition: transform .25s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.page a.block.border.rounded-xl:hover {
+  transform: translateY(-4px); border-color: var(--accent-s60);
+  box-shadow: 0 22px 48px -26px rgba(0,0,0,.4);
+}
+
+/* ---- city chips (service-areas hub) ---- */
+body.page a.block.border.rounded-md {
+  border: 1px solid var(--bd-light); border-radius: 3px;
+  transition: transform .18s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+body.page a.block.border.rounded-md:hover {
+  transform: translateY(-2px); border-color: var(--accent-s60);
+  background: var(--cream); box-shadow: 0 12px 26px -18px rgba(0,0,0,.35);
+}
+
+/* ---- solid gold buttons inside content ---- */
+body.page a.bg-rust { letter-spacing: .04em; }
+
+/* ---- CTA band: deep-green with a gold glow + serif headline ---- */
+body.page section.bg-rust {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(70% 130% at 6% 0%, rgba(181,135,76,.22), transparent 55%),
+    var(--accent-dk);
+  border-top: 1px solid var(--bd-dark);
+}
+body.page section.bg-rust > div { position: relative; z-index: 1; padding-top: 42px; padding-bottom: 42px; }
+body.page section.bg-rust p.text-lg {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
+  font-size: 26px; line-height: 1.2; color: var(--paper-hi);
+}
+/* primary CTA button -> solid gold; secondary -> ghost light */
+body.page section.bg-rust a.bg-white {
+  background: var(--accent); color: var(--paper); border-radius: 2px;
+  font-weight: 700; letter-spacing: .04em;
+  transition: transform .14s ease, background .2s ease, box-shadow .25s ease;
+}
+body.page section.bg-rust a.bg-white:hover {
+  background: var(--accent-lt); color: var(--paper);
+  transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(0,0,0,.45);
+}
+body.page section.bg-rust a.border-2.border-white {
+  border-color: var(--bd-dark-2); color: var(--paper-hi); border-radius: 2px;
+  transition: transform .14s ease, border-color .2s ease, color .2s ease;
+}
+body.page section.bg-rust a.border-2.border-white:hover {
+  border-color: var(--accent); color: var(--accent-lt);
+  background: transparent; transform: translateY(-2px);
+}
+
+/* ---- quote/contact form inputs ---- */
+body.page form.bg-cream input,
+body.page form.bg-cream select,
+body.page form.bg-cream textarea {
+  border: 1px solid var(--bd-light); border-radius: 3px; background: #fff;
+}
+body.page form.bg-cream button[type="submit"] {
+  border-radius: 2px; text-transform: uppercase; letter-spacing: .06em;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 640px) {
+  body.page main#main > section.bg-navy { padding-top: 54px; padding-bottom: 54px; }
+  body.page main#main > section:not(.bg-navy):not(.bg-rust) { padding-top: 52px; padding-bottom: 52px; }
+  body.page section.bg-rust p.text-lg { font-size: 22px; }
+}
