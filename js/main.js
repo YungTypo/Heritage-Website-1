@@ -55,7 +55,11 @@
         if (line) line.style.left = p + '%';
         if (handle) handle.style.left = p + '%';
       }
+      // Block the browser's native image/ghost drag — it steals the pointer
+      // stream mid-swipe and freezes the slider.
+      root.addEventListener('dragstart', function (e) { e.preventDefault(); });
       root.addEventListener('pointerdown', function (e) {
+        e.preventDefault();
         dragging = true;
         try { root.setPointerCapture(e.pointerId); } catch (_) {}
         setFromX(e.clientX);
@@ -65,6 +69,7 @@
       });
       root.addEventListener('pointerup', function () { dragging = false; });
       root.addEventListener('pointercancel', function () { dragging = false; });
+      root.addEventListener('lostpointercapture', function () { dragging = false; });
     })();
 
     /* ---------- close mobile nav after choosing a link ---------- */
