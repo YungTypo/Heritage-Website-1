@@ -76,5 +76,61 @@
       });
     })();
 
+    /* ---------- Web3Forms submission (progressive enhancement) ----------
+       Forms POST natively to Web3Forms and redirect to /thank-you.html with
+       no JS. When fetch is available we submit over AJAX instead so we can
+       show an inline error (and keep the visitor on-page) if it fails. */
+    (function web3forms() {
+      var forms = document.querySelectorAll('form[data-web3forms]');
+      if (!forms.length || !window.fetch) return;
+
+      forms.forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+          // Honeypot tripped: silently drop, don't submit.
+          var trap = form.querySelector('[name="botcheck"]');
+          if (trap && trap.checked) { e.preventDefault(); return; }
+
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          var label = btn ? btn.innerHTML : '';
+          if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
+          clearError(form);
+
+          var data = {};
+          new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (res) {
+              if (res && res.success) {
+                window.location.href = '/thank-you.html';
+              } else {
+                fail(form, btn, label);
+              }
+            })
+            .catch(function () { fail(form, btn, label); });
+        });
+      });
+
+      function clearError(form) {
+        var e = form.querySelector('[data-form-error]');
+        if (e) e.remove();
+      }
+      function fail(form, btn, label) {
+        if (btn) { btn.disabled = false; btn.innerHTML = label; }
+        clearError(form);
+        var p = document.createElement('p');
+        p.setAttribute('data-form-error', '');
+        p.setAttribute('role', 'alert');
+        p.style.cssText = 'margin:8px 0 0;text-align:center;color:#B23A2E;font-size:14px;font-weight:600';
+        p.innerHTML = 'Something went wrong — please call <a href="tel:+16156703132" style="color:#B23A2E">(615) 670-3132</a> or try again.';
+        form.appendChild(p);
+      }
+    })();
+
   });
 })();
