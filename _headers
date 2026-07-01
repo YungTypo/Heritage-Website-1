@@ -16,5 +16,15 @@
   Cache-Control: public, max-age=604800
 /heritage-logo.jpg
   Cache-Control: public, max-age=2592000
+/heritage-logo-dark.png
+  Cache-Control: public, max-age=2592000
+/heritage-logo.png
+  Cache-Control: public, max-age=2592000
+/heritage-emblem.png
+  Cache-Control: public, max-age=2592000
+/heritage-icon.png
+  Cache-Control: public, max-age=2592000
+/hero-roof.jpg
+  Cache-Control: public, max-age=2592000
 /favicon.svg
   Cache-Control: public, max-age=2592000
